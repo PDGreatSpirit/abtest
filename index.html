@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3VTG31R3X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q3VTG31R3X');
+    </script>
     <title>A/B 테스트 (B안 - 실험)</title> <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -50,8 +57,12 @@
     <div class="container">
         <h1>놀라운 서비스를 만나보세요</h1>
         <p>지금 바로 저희의 특별한 기능을 확인해보세요.</p>
-        
-        <a href="#" class="cta-button">무료로 시작하기</a>
+        <a href="#" class="cta-button" onclick="gtag('event', 'cta_click', { 'test_version': 'A' });">무료로 시작하기</a>
+    </div>    
+    <script>
+      // 이 gtag 이벤트도 GA4 스크립트와 짝이 맞으므로 잘 작동합니다.
+      gtag('event', 'view_version', { 'test_version': 'A' });
+    </script>
     </div>
 </body>
 </html>
