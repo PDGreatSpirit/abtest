@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>A/B 테스트 (A안 - 원본)</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3VTG31R3X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,18 +10,60 @@
       gtag('js', new Date());
       gtag('config', 'G-Q3VTG31R3X');
     </script>
+    <title>A/B 테스트 (A안 - 기존)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #f4f7f6;
+            margin: 0;
+        }
+        .container {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- A안 (원본) 스타일 --- */
+        .cta-button {
+            background-color: #888; /* 회색 */
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <h1>놀라운 서비스를 만나보세요</h1>
         <p>지금 바로 저희의 특별한 기능을 확인해보세요.</p>
-        
         <a href="#" class="cta-button" onclick="gtag('event', 'cta_click', { 'test_version': 'A' });">더 알아보기</a>
     </div>    
-
     <script>
       // 이 gtag 이벤트도 GA4 스크립트와 짝이 맞으므로 잘 작동합니다.
       gtag('event', 'view_version', { 'test_version': 'A' });
     </script>
+    </div>
 </body>
 </html>
